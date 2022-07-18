@@ -74,6 +74,8 @@ The `misc` directory contains some other functions.
 
 ```matlab
 # open the test_demo.m
+clear;clc;
+addpath(genpath(pwd))
 load('results\example\3_0.5_2_0.5_20.mat')
 [result,~] = ABCSMCSampler(N,prior,f,rho,epsilon,T,proposal,proposal_pdf,1);
 figureResult(data,result(:,end),param_true)
