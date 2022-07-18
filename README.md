@@ -8,7 +8,7 @@ BayesGTM is a  inference framework to estimate burst kinetic parameters of gene 
 
 test_demo.m, test_MEFs.m, simulGTM, statisData.m, statisGTM.m, figureResult.m, ABCSMCSampler.m, ABCRejectionSampler.m are all MATLAB scripts with versions.
 
-```matlab
+```
 MATLAB Version: 9.10.0.1649659 (R2021a) Update 1
 Operating System: Microsoft Windows 10 Professional Version 10.0 (Build 19044)
 Java Version: Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
@@ -79,5 +79,4 @@ addpath(genpath(pwd))
 load('results\example\3_0.5_2_0.5_20.mat')
 [result,~] = ABCSMCSampler(N,prior,f,rho,epsilon,T,proposal,proposal_pdf,1);
 figureResult(data,result(:,end),param_true)
-save(sprintf('results/example/%d_%.1f_%d_%.1f_%d_%d.mat',param_true.kon,param_true.ron,param_true.koff,param_true.roff,param_true.mu))
 ```
