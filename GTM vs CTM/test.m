@@ -15,7 +15,7 @@ burst_true = [1/(param_true.kon/param_true.ron + param_true.koff/param_true.roff
 num_sim = 1000;
 results_all = zeros(num_sim,2);
 for i = 1:num_sim
-    [x,t] = queuingGeneOnOffModel(param_true);
+    [x,t] = simulGTM(param_true);
     tq = 1000:0.1:param_true.tottime;
     xq = interp1(t,x(:,3),tq,'previous');
     
